@@ -1,7 +1,7 @@
 #!/bin/bash
 generate_main_tf () {
-    export DTF_SHORT_NAME="${DTF_SHORT_NAME:=alicloud}"
-    export DTF_SHORT_REPOSITORY_PATH="${DTF_SHORT_REPOSITORY_PATH:=aliyun/alicloud}"
+    export DTF_SHORT_NAME="${DTF_SHORT_NAME:=aws}"
+    export DTF_SHORT_REPOSITORY_PATH="${DTF_SHORT_REPOSITORY_PATH:=hashicorp/aws}"
     export DTF_PROVIDER_VERSION="${DTF_PROVIDER_VERSION:=~> 1.0}"
     echo $DTF_SHORT_NAME
     echo $DTF_SHORT_REPOSITORY_PATH
@@ -44,7 +44,7 @@ clean_leave_libs() {
 }
 
 clean_all() {
-    clean_libs_tf && clean_main_tf && clean_terraform_tf 
+    clean_libs_tf && clean_leave_libs
 }
 
 close() {

@@ -24,6 +24,7 @@ pkgs.mkShell {
          jq
          terraform_1_0
          dhall
+         dhall-json
          dhall-terraform-libgen 
         ];
 }
